@@ -39,7 +39,7 @@ func init() {
 }
 
 func queryCb(string) error {
-	camera, err := ptz.New(host)
+	camera, err := ptz.Connect(host)
 	if err != nil {
 		return err
 	}
@@ -52,7 +52,7 @@ func queryCb(string) error {
 }
 
 func presetCb(string) error {
-	camera, err := ptz.New(host)
+	camera, err := ptz.Connect(host)
 	if err != nil {
 		return err
 	}
